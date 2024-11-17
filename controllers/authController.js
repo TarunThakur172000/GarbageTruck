@@ -13,9 +13,14 @@ const login = async (req, res) => {
             return res.status(404).json({ message: 'Candidate not found' });
         }
 
-        // Validate the password
-        const isPasswordValid = await bcrypt.compare(password, candidate.password);
-        if (!isPasswordValid) {
+       // Validate the password
+        // const isPasswordValid = await bcrypt.compare(password, candidate.password);
+        // if (!isPasswordValid) {
+        //     return res.status(400).json({ message: 'Invalid password' });
+        // }
+
+
+        if(password!=candidate.password){
             return res.status(400).json({ message: 'Invalid password' });
         }
 
