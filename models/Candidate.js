@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const candidateSchema = new Schema({
     candidate_id: { type: Schema.Types.ObjectId, auto: true },
-    fullName: { type: String, required: true },
+    fullname: { type: String, required: true },
     email: { type: String, required: true, unique: true }, // Primary key
     phone: { type: String, required: true },
     password: { type: String, required: true },
