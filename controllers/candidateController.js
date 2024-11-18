@@ -3,14 +3,14 @@ const Candidate = require('../models/Candidate');
 
 const addCandidate = async (req, res) => {
     try {
-        const { fullName, email, phone, password, age, highestQualification, languages, experience, currentSalary, expectedSalary, country, city, postcode, fullAddress, description, resume, candidateImageUrl, appliedJobs } = req.body;
+        const { fullname, email, phone, password, age, highestQualification, languages, experience, currentSalary, expectedSalary, country, city, postcode, fullAddress, description, resume, candidateImageUrl, appliedJobs } = req.body;
 
 
         
 
         // Create a new candidate document
         const candidate = new Candidate({
-            fullName,
+            fullname,
             email,
             phone,
             password,
